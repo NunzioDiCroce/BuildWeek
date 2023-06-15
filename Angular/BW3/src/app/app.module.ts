@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 // import Route, RouterModule per gestione rotte
 import { Route, RouterModule } from '@angular/router';
 
+// import HttpClientModule per gestione metodi http
+import { HttpClientModule } from '@angular/common/http'
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -41,7 +44,9 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     // import RouterModule con metodo forRoot applicato alle rotte
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    // import HttpClientModule per gestione metodi http
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
