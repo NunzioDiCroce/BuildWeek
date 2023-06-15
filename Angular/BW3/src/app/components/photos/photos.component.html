@@ -1,1 +1,20 @@
-<p>photos works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+
+      <div *ngFor="let photo of photos">
+        <div class="card mb-3" style="width: 18rem;">
+          <img src="{{ photo.url }}" class="card-img-top" alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">{{ photo.id }}. {{ photo.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Album Id: {{ photo.albumId }}</h6>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
