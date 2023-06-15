@@ -6,9 +6,6 @@ import { Post } from 'src/app/models/post.interface';
 // import servizio
 import { PostsService } from 'src/app/services/posts.service';
 
-// import subscription per sottoscrizione observable
-import { Subscription } from 'rxjs';
-
 
 @Component({
   selector: 'app-posts',
@@ -24,7 +21,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // subscribe observable per recupero posts
+    // subscribe metodo service
     this.postsSrv.getPosts().subscribe((_posts:Post[]) => {this.posts = _posts});
     console.log(this.posts)
   }
