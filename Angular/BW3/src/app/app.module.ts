@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 
 // import HttpClientModule per gestione metodi http
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';

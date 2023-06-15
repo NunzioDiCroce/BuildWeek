@@ -19,5 +19,4 @@ export class PostsService {
     return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts')
   }
 
-
 }
