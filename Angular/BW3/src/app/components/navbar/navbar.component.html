@@ -1,1 +1,54 @@
-<p>navbar works!</p>
+
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">BuildWeek3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+        <a class="nav-link active" aria-current="page"
+        [routerLink]="['/']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a>
+
+        <a class="nav-link"
+        [routerLink]="['/posts']"
+        routerLinkActive="active"
+        >Posts</a>
+
+        <a class="nav-link"
+        [routerLink]="['/comments']"
+        routerLinkActive="active"
+        >Comments</a>
+
+        <a class="nav-link"
+        [routerLink]="['/albums']"
+        routerLinkActive="active"
+        >Albums</a>
+
+        <a class="nav-link"
+        [routerLink]="['/photos']"
+        routerLinkActive="active"
+        >Photos</a>
+
+        <a class="nav-link"
+        [routerLink]="['/todos']"
+        routerLinkActive="active"
+        >Todos</a>
+
+        <a class="nav-link"
+        [routerLink]="['/users']"
+        routerLinkActive="active"
+        >Users</a>
+
+      </div>
+    </div>
+
+  </div>
+
+</nav>

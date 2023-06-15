@@ -16,13 +16,14 @@ import { UsersComponent } from './components/users/users.component';
 
 // definizione array delle rotte di tipo Route
 const routes: Route[] = [
-  { path:'', component: HomeComponent },
-  { path:'posts', component: PostsComponent },
-  { path:'comments', component: CommentsComponent },
-  { path:'albums', component: AlbumsComponent },
-  { path:'photos', component: PhotosComponent },
-  { path:'todos', component: TodosComponent },
-  { path:'users', component: UsersComponent }
+  { path: '', component: HomeComponent },
+  { path: 'posts', component: PostsComponent },
+  { path: 'comments', component: CommentsComponent },
+  { path: 'albums', component: AlbumsComponent },
+  { path: 'photos', component: PhotosComponent },
+  { path: 'todos', component: TodosComponent },
+  { path: 'users', component: UsersComponent },
+  { path: '**', redirectTo: '' }
 ]
 
 @NgModule({
