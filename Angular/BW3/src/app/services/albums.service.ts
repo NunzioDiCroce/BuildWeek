@@ -19,4 +19,8 @@ export class AlbumsService {
     return this.http.get<Album[]>('https://jsonplaceholder.typicode.com/albums')
   }
 
+  // definizione metodo per recupero user albums
+  getUserAlbums(_userId:number) {
+    return this.http.get<Album[]>(`https://jsonplaceholder.typicode.com/albums/?userId=${_userId}`)
+  }
 }

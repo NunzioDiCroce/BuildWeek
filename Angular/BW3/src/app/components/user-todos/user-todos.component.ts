@@ -17,19 +17,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UserTodosComponent implements OnInit {
 
-
   // definizione variabile todos
   todos: Todo[] | undefined;
   // definzione variabile userId
   userId!: number;
 
-
   constructor( private toDosSrv:TodosService, private route:ActivatedRoute, private router:Router ) { } // dichiarazione parametri servizio e routing
 
   ngOnInit(): void {
 
-
-    // definizione metodo per recupero user todos
+    // recupero user todos
     this.route.params.subscribe((_parameter) => {
       this.userId = +_parameter['userId'];
       //this.getUserTodosComponent()
@@ -37,14 +34,16 @@ export class UserTodosComponent implements OnInit {
     })
   }
 
+  // SOLUZIONE ABBANDONATA A FOVORE DEL METODO DEL SERVICE DIRETTAMENTE IN ONINIT
   // definzione metodo del COMPONENT che richiama il metodo del SERVICE per recupero user todos
   /*getUserTodosComponent() {
     this.toDosSrv.getUserTodos(this.userId).subscribe((_todos) => {this.todos = _todos})
   }*/
 
+  // SOLUZIONE ABBANDONATA A FAVORE DI [routerLink]="['/users']" NEL TEMPLATE
   // definizione metodo per ritorno a users
-  goToUsers() {
+  /*goToUsers() {
     this.router.navigate(['/users'])
-  }
+  }*/
 
 }
