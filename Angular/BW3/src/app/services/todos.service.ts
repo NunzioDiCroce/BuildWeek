@@ -19,4 +19,9 @@ export class TodosService {
     return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
   }
 
+  // definizione metodo per recupero user todos
+  getUserTodos(_userId:number) {
+    return this.http.get<Todo[]>(`https://jsonplaceholder.typicode.com/todos/?userId=${_userId}`)
+  }
+
 }
