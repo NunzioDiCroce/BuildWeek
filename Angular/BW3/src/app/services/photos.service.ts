@@ -19,4 +19,9 @@ export class PhotosService {
     return this.http.get<Photo[]>('https://jsonplaceholder.typicode.com/photos')
   }
 
+  // definizione metodo per recuper album photos
+  getAlbumPhotos(_albumId:number) {
+    return this.http.get<Photo[]>(`https://jsonplaceholder.typicode.com/photos/?albumId=${_albumId}`)
+  }
+
 }
