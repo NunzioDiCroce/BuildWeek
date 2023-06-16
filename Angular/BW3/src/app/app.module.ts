@@ -19,6 +19,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserTodosComponent } from './components/user-todos/user-todos.component';
 import { UserAlbumsComponent } from './components/user-albums/user-albums.component';
 import { AlbumPhotosComponent } from './components/album-photos/album-photos.component';
+import { CommentPostsComponent } from './components/comment-posts/comment-posts.component';
 
 // definizione array delle rotte di tipo Route
 const routes: Route[] = [
@@ -48,7 +49,8 @@ const routes: Route[] = [
     UsersComponent,
     UserTodosComponent,
     UserAlbumsComponent,
-    AlbumPhotosComponent
+    AlbumPhotosComponent,
+    CommentPostsComponent
   ],
   imports: [
     BrowserModule,
