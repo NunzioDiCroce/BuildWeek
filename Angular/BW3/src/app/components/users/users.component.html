@@ -1,23 +1,21 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-12" *ngFor="let user of users">
 
-      <div *ngFor="let user of users">
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">{{ user.id }}. {{ user.username }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              <b>Name:</b> {{ user.name }}<br>
-              <b>Email:</b> {{ user.email }}<br>
-              <b>Address:</b> {{ user.address.suite }}, {{ user.address.street }}, {{ user.address.city }}, {{ user.address.zipcode }} | latitude: {{ user.address.geo.lat }}, longitude: {{ user.address.geo.lng }}<br>
-              <b>Phone:</b> {{ user.phone }}<br>
-              <b>Website:</b> {{ user.website }}<br>
-              <b>Company:</b> {{ user.company.name }} | {{ user.company.catchPhrase }} | {{ user.company.bs }}<br>
-            </h6>
-            <p class="card-text"></p>
-            <a href="#" class="card-link">link</a>
-          </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.id }}. {{ user.username }}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">
+            <b>Name:</b> {{ user.name }}<br>
+            <b>Email:</b> {{ user.email }}<br>
+            <b>Address:</b> {{ user.address.suite }}, {{ user.address.street }}, {{ user.address.city }}, {{ user.address.zipcode }} | latitude: {{ user.address.geo.lat }}, longitude: {{ user.address.geo.lng }}<br>
+            <b>Phone:</b> {{ user.phone }}<br>
+            <b>Website:</b> {{ user.website }}<br>
+            <b>Company:</b> {{ user.company.name }} | {{ user.company.catchPhrase }} | {{ user.company.bs }}<br>
+          </h6>
+          <p class="card-text"></p>
+          <a href="#" class="card-link">link</a>
         </div>
       </div>
 
