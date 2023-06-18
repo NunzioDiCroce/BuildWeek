@@ -1,14 +1,15 @@
 
 <div class="container">
   <div class="row">
+    <h4 class="mb-3">All todos</h4>
     <div class="col-12" *ngFor="let todo of todos">
 
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">ToDo {{ todo.id }} | {{ todo.title }} | Completed = {{ todo.completed }}</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">User Id: {{ todo.userId }}</h6>
-          <p class="card-text"></p>
-          <a [routerLink]="['/users']" class="card-link">Users</a>
+          <h5 class="card-title">ToDo {{ todo.id }}</h5>
+          <h5 class="card-title">{{ todo.title }}</h5>
+          <h5 class="card-title mb-3">Completed = {{ todo.completed }}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">UserId {{ todo.userId }}</h6>
         </div>
       </div>
 

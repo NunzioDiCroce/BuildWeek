@@ -1,24 +1,20 @@
 
 <div class="container">
   <div class="row">
+    <h4 class="mb-3">Users</h4>
     <div class="col-12" *ngFor="let user of users">
 
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">{{ user.id }}. {{ user.username }}</h5>
+          <h5 class="card-title">{{ user.username }}</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">
             <b>Name:</b> {{ user.name }}<br>
-            <b>Email:</b> {{ user.email }}<br>
-            <b>Address:</b> {{ user.address.suite }}, {{ user.address.street }}, {{ user.address.city }}, {{ user.address.zipcode }} | latitude: {{ user.address.geo.lat }}, longitude: {{ user.address.geo.lng }}<br>
-            <b>Phone:</b> {{ user.phone }}<br>
-            <b>Website:</b> {{ user.website }}<br>
-            <b>Company:</b> {{ user.company.name }} | {{ user.company.catchPhrase }} | {{ user.company.bs }}<br>
           </h6>
           <p class="card-text"></p>
-          <a [routerLink]="['/users', user.id]" class="card-link">User Details</a>
-          <a [routerLink]="['/posts', user.id]" class="card-link">User Posts</a>
-          <a [routerLink]="['/albums', user.id]" class="card-link">User Albums</a>
-          <a [routerLink]="['/todos', user.id]" class="card-link">User Todos</a>
+          <a [routerLink]="['/users', user.id]" class="card-link">See {{ user.username }} details</a>
+          <a [routerLink]="['/posts', user.id]" class="card-link">See {{ user.username }} posts</a>
+          <a [routerLink]="['/albums', user.id]" class="card-link">See {{ user.username }} albums</a>
+          <a [routerLink]="['/todos', user.id]" class="card-link">See {{ user.username }} todos</a>
         </div>
       </div>
 

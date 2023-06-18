@@ -1,12 +1,14 @@
 
 <div class="container">
   <div class="row">
+    <h4 class="mb-3">All albums</h4>
     <div class="col-12" *ngFor="let album of albums">
 
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">Album {{ album.id }} | {{ album.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">User Id: {{ album.userId }}</h6>
+          <h5 class="card-title">Album {{ album.id }}</h5>
+          <h5 class="card-title mb-3">{{ album.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">By UserId {{ album.userId }}</h6>
           <p class="card-text"></p>
           <a [routerLink]="['/photos', album.id]" class="card-link">Album Photos</a>
         </div>
