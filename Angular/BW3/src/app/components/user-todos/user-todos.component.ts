@@ -6,7 +6,7 @@ import { Todo } from 'src/app/models/todo.interface';
 // import servizio
 import { TodosService } from 'src/app/services/todos.service';
 
-// import Router, ActivateRoute
+// import ActivatedRoute, Router
 import { ActivatedRoute, Router } from '@angular/router';
 
 

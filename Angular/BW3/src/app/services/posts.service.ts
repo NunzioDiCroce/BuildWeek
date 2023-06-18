@@ -19,4 +19,9 @@ export class PostsService {
     return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts')
   }
 
+  // definizione metodo per recupero user posts
+  getUserPosts(_userId:number) {
+    return this.http.get<Post[]>(`https://jsonplaceholder.typicode.com/posts/?userId=${_userId}`)
+  }
+
 }
