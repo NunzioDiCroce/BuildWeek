@@ -9,6 +9,7 @@
           <h6 class="card-subtitle mb-2 text-body-secondary">User Id: {{ post.userId }}</h6>
           <p class="card-text">{{ post.body }}</p>
           <a [routerLink]="['/users']" class="card-link">Users</a>
+          <a [routerLink]="['/comments', post.id]" class="card-link">Post Comments</a>
         </div>
       </div>
 

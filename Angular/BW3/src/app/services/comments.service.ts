@@ -19,4 +19,9 @@ export class CommentsService {
     return this.http.get<Comment[]>('https://jsonplaceholder.typicode.com/comments')
   }
 
+  // definizione metodo per recupero post comments
+  getPostComments(_postId:number) {
+    return this.http.get<Comment[]>(`https://jsonplaceholder.typicode.com/comments/?postId=${_postId}`)
+  }
+
 }

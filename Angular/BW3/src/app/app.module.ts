@@ -21,6 +21,7 @@ import { UserAlbumsComponent } from './components/user-albums/user-albums.compon
 import { AlbumPhotosComponent } from './components/album-photos/album-photos.component';
 import { CommentPostsComponent } from './components/comment-posts/comment-posts.component';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { PostCommentsComponent } from './components/post-comments/post-comments.component';
 
 // definizione array delle rotte di tipo Route
 const routes: Route[] = [
@@ -28,6 +29,7 @@ const routes: Route[] = [
   { path: 'posts', component: PostsComponent },
   { path: 'posts/:userId', component: UserPostsComponent },
   { path: 'comments', component: CommentsComponent },
+  { path: 'comments/:postId', component: PostCommentsComponent },
   { path: 'albums', component: AlbumsComponent },
   { path: 'albums/:userId', component: UserAlbumsComponent },
   { path: 'photos', component: PhotosComponent },
@@ -53,7 +55,8 @@ const routes: Route[] = [
     UserAlbumsComponent,
     AlbumPhotosComponent,
     CommentPostsComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    PostCommentsComponent
   ],
   imports: [
     BrowserModule,
