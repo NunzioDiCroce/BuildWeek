@@ -18,4 +18,9 @@ export class UsersService {
   getUsers() {
     return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
   }
+
+  // definizione metodo per recupero user details
+  getUserDetails(_id:number) {
+    return this.http.get<User[]>(`https://jsonplaceholder.typicode.com/users/?id=${_id}`)
+  }
 }

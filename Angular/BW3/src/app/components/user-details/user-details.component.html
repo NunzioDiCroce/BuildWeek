@@ -15,7 +15,7 @@
             <b>Company:</b> {{ user.company.name }} | {{ user.company.catchPhrase }} | {{ user.company.bs }}<br>
           </h6>
           <p class="card-text"></p>
-          <a [routerLink]="['/users', user.id]" class="card-link">User Details</a>
+          <a [routerLink]="['/users']" class="card-link">Users</a>
           <a [routerLink]="['/posts', user.id]" class="card-link">User Posts</a>
           <a [routerLink]="['/albums', user.id]" class="card-link">User Albums</a>
           <a [routerLink]="['/todos', user.id]" class="card-link">User Todos</a>
